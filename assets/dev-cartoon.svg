@@ -1,51 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="devTitle devDesc">
-  <title id="devTitle">Funny cartoon developer coding late at night with headphones, rubber duck, steaming coffee mug, blinking cursor, and floating code symbols</title>
-  <desc id="devDesc">A stylized vector developer wearing glowing headphones and glasses typing excitedly at a desk beside a rubber duck debugger, an oversized steaming coffee mug, a glowing monitor with a blinking cursor, and floating code badges.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="960" height="380" role="img" aria-labelledby="devTitle devDesc">
+  <title id="devTitle">Funny meme-style comic developer at a desk saying This is fine during late-night debugging</title>
+  <desc id="devDesc">Original comic stick-figure developer in a hoodie and glasses holding a steaming coffee mug beside a monitor with a blinking cursor, playful background bug flames, a nervous rubber duck, and floating code symbols.</desc>
 
   <defs>
-    <linearGradient id="bgSky" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d1a"/>
-      <stop offset="55%" stop-color="#111b36"/>
-      <stop offset="100%" stop-color="#1e1b4b"/>
+    <linearGradient id="comicWall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="60%" stop-color="#1e1b2e"/>
+      <stop offset="100%" stop-color="#291720"/>
     </linearGradient>
-    <radialGradient id="monitorHalo" cx="62%" cy="46%" r="38%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28"/>
-      <stop offset="55%" stop-color="#6366f1" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    <radialGradient id="fireGlow" cx="50%" cy="78%" r="48%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.28"/>
+      <stop offset="65%" stop-color="#ef4444" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#111827" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="deskSurface" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#334155"/>
-      <stop offset="50%" stop-color="#475569"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-    <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0ea5e9"/>
-      <stop offset="100%" stop-color="#4f46e5"/>
-    </linearGradient>
-    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fbd3b6"/>
-      <stop offset="100%" stop-color="#ebb08a"/>
-    </linearGradient>
-    <linearGradient id="screenBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0b1220"/>
-      <stop offset="100%" stop-color="#162033"/>
-    </linearGradient>
-    <linearGradient id="rgbStrip" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22d3ee"/>
-      <stop offset="50%" stop-color="#a855f7"/>
-      <stop offset="100%" stop-color="#34d399"/>
+    <linearGradient id="flameOuter" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="60%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#facc15"/>
     </linearGradient>
   </defs>
 
   <style>
     .cursor-blink { animation: cursorBlink 1s steps(2, start) infinite; }
-    .steam-1 { animation: steamRise 3s ease-in-out infinite; }
-    .steam-2 { animation: steamRise 3s ease-in-out 1s infinite; }
-    .steam-3 { animation: steamRise 3s ease-in-out 2s infinite; }
-    .float-slow { animation: gentleBob 4.2s ease-in-out infinite; }
-    .float-alt { animation: gentleBob 4.2s ease-in-out 1.6s infinite; }
-    .head-bob { animation: headGroove 2.4s ease-in-out infinite; }
-    .duck-pop { animation: gentleBob 3.6s ease-in-out 0.8s infinite; }
+    .steam-1 { animation: steamRise 2.8s ease-in-out infinite; }
+    .steam-2 { animation: steamRise 2.8s ease-in-out 0.9s infinite; }
+    .flame-flicker { animation: flicker 1.8s ease-in-out infinite; }
+    .flame-flicker-alt { animation: flicker 2.1s ease-in-out 0.7s infinite; }
+    .sym-float { animation: symFloat 3.8s ease-in-out infinite; }
+    .sym-float-alt { animation: symFloat 4.1s ease-in-out 1.4s infinite; }
 
     @keyframes cursorBlink {
       0%, 49% { opacity: 1; }
@@ -53,254 +35,193 @@
     }
     @keyframes steamRise {
       0% { opacity: 0.25; transform: translateY(5px); }
-      50% { opacity: 0.88; transform: translateY(-6px); }
+      50% { opacity: 0.9; transform: translateY(-6px); }
       100% { opacity: 0.25; transform: translateY(5px); }
     }
-    @keyframes gentleBob {
-      0%, 100% { transform: translateY(0px); opacity: 0.85; }
-      50% { transform: translateY(-6px); opacity: 1; }
+    @keyframes flicker {
+      0%, 100% { opacity: 0.85; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.06); }
     }
-    @keyframes headGroove {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(2.5px); }
+    @keyframes symFloat {
+      0%, 100% { opacity: 0.78; transform: translateY(0px); }
+      50% { opacity: 1; transform: translateY(-6px); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .cursor-blink, .steam-1, .steam-2, .steam-3, .float-slow, .float-alt, .head-bob, .duck-pop {
+      .cursor-blink, .steam-1, .steam-2, .flame-flicker, .flame-flicker-alt, .sym-float, .sym-float-alt {
         animation: none;
-        transform: none;
         opacity: 0.92;
+        transform: none;
       }
     }
   </style>
 
-  <!-- Night Coding Backdrop -->
-  <rect width="960" height="400" rx="18" fill="url(#bgSky)"/>
-  <rect width="960" height="400" rx="18" fill="url(#monitorHalo)"/>
-  <rect x="1.5" y="1.5" width="957" height="397" rx="17" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <!-- Comic Panel Frame & Warm Background -->
+  <rect width="960" height="380" rx="16" fill="url(#comicWall)"/>
+  <rect width="960" height="380" rx="16" fill="url(#fireGlow)"/>
+  <rect x="4" y="4" width="952" height="372" rx="13" fill="none" stroke="#f8fafc" stroke-width="2.5" stroke-opacity="0.22"/>
 
-  <!-- Cozy Night Stars / Ambient Bokeh -->
-  <circle cx="72" cy="54" r="2" fill="#e2e8f0" opacity="0.5"/>
-  <circle cx="136" cy="36" r="1.5" fill="#38bdf8" opacity="0.6"/>
-  <circle cx="888" cy="52" r="2.2" fill="#a5b4fc" opacity="0.55"/>
-  <circle cx="840" cy="84" r="1.5" fill="#22d3ee" opacity="0.5"/>
-  <circle cx="48" cy="240" r="1.8" fill="#818cf8" opacity="0.45"/>
-
-  <!-- Floating Code Symbols (static translated wrappers, un-transformed animated children) -->
-  <g transform="translate(68, 76)">
-    <g class="float-slow">
-      <rect x="0" y="0" width="66" height="34" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1.5"/>
-      <text x="33" y="23" text-anchor="middle" fill="#38bdf8" font-family="Consolas, monospace" font-size="16" font-weight="700">{ }</text>
+  <!-- Playful Cartoon "Prod Bugs" Flames Behind Desk -->
+  <g transform="translate(86, 206)">
+    <g class="flame-flicker">
+      <path d="M 18 82 C -2 64, 4 36, 18 18 C 20 34, 30 34, 34 8 C 48 28, 56 54, 36 82 Z" fill="url(#flameOuter)" opacity="0.88"/>
+      <path d="M 22 82 C 14 70, 18 52, 26 42 C 32 54, 36 68, 30 82 Z" fill="#fef08a"/>
+    </g>
+  </g>
+  <g transform="translate(154, 224)">
+    <g class="flame-flicker-alt">
+      <path d="M 14 64 C 0 50, 4 28, 16 12 C 20 26, 26 24, 28 4 C 40 20, 44 42, 30 64 Z" fill="url(#flameOuter)" opacity="0.8"/>
+    </g>
+  </g>
+  <g transform="translate(810, 210)">
+    <g class="flame-flicker">
+      <path d="M 18 78 C 0 60, 6 34, 20 14 C 22 30, 30 28, 34 6 C 48 24, 52 50, 36 78 Z" fill="url(#flameOuter)" opacity="0.85"/>
+      <path d="M 22 78 C 16 66, 20 50, 26 40 C 32 52, 36 66, 30 78 Z" fill="#fef08a"/>
     </g>
   </g>
 
-  <g transform="translate(86, 152)">
-    <g class="float-alt">
-      <rect x="0" y="0" width="76" height="34" rx="10" fill="#0f172a" stroke="#a855f7" stroke-opacity="0.6" stroke-width="1.5"/>
-      <text x="38" y="22" text-anchor="middle" fill="#c084fc" font-family="Consolas, monospace" font-size="15" font-weight="700">&lt;/&gt;</text>
+  <!-- Floating Code Symbols (static translated wrappers) -->
+  <g transform="translate(56, 56)">
+    <g class="sym-float">
+      <rect width="68" height="32" rx="9" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+      <text x="34" y="22" text-anchor="middle" fill="#38bdf8" font-family="Consolas, monospace" font-size="16" font-weight="700">{ }</text>
+    </g>
+  </g>
+  <g transform="translate(76, 122)">
+    <g class="sym-float-alt">
+      <rect width="78" height="32" rx="9" fill="#0f172a" stroke="#fb923c" stroke-width="2"/>
+      <text x="39" y="21" text-anchor="middle" fill="#fdba74" font-family="Consolas, monospace" font-size="15" font-weight="700">&lt;/&gt;</text>
+    </g>
+  </g>
+  <g transform="translate(812, 54)">
+    <g class="sym-float-alt">
+      <rect width="84" height="32" rx="9" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+      <text x="42" y="21" text-anchor="middle" fill="#22d3ee" font-family="Consolas, monospace" font-size="15" font-weight="700">() =&gt;</text>
+    </g>
+  </g>
+  <g transform="translate(796, 118)">
+    <g class="sym-float">
+      <rect width="106" height="32" rx="9" fill="#0f172a" stroke="#f87171" stroke-width="2"/>
+      <text x="53" y="21" text-anchor="middle" fill="#fca5a5" font-family="Consolas, monospace" font-size="13" font-weight="700">undefined</text>
     </g>
   </g>
 
-  <g transform="translate(810, 74)">
-    <g class="float-alt">
-      <rect x="0" y="0" width="84" height="34" rx="10" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="1.5"/>
-      <text x="42" y="22" text-anchor="middle" fill="#22d3ee" font-family="Consolas, monospace" font-size="15" font-weight="700">() =&gt;</text>
-    </g>
-  </g>
-
-  <g transform="translate(824, 150)">
-    <g class="float-slow">
-      <rect x="0" y="0" width="78" height="34" rx="10" fill="#0f172a" stroke="#34d399" stroke-opacity="0.6" stroke-width="1.5"/>
-      <text x="39" y="22" text-anchor="middle" fill="#34d399" font-family="Consolas, monospace" font-size="14" font-weight="700">AI / RAG</text>
-    </g>
-  </g>
-
-  <!-- Funny Sticky Thought Bubble -->
-  <g transform="translate(274, 34)">
-    <g class="float-slow">
-      <rect x="0" y="0" width="168" height="34" rx="12" fill="#fef08a" stroke="#eab308" stroke-width="1.5"/>
-      <polygon points="26,34 40,34 22,45" fill="#fef08a" stroke="#eab308" stroke-width="1.5"/>
-      <rect x="24" y="31" width="18" height="5" fill="#fef08a"/>
-      <text x="84" y="22" text-anchor="middle" fill="#1e293b" font-family="'Segoe UI', Comic Sans MS, sans-serif" font-size="12.5" font-weight="700">it works on my machine!</text>
-    </g>
+  <!-- Comic Speech Bubble: "This is fine." -->
+  <g transform="translate(184, 28)">
+    <rect x="0" y="0" width="246" height="54" rx="16" fill="#fefce8" stroke="#0f172a" stroke-width="3.5"/>
+    <polygon points="96,53 122,53 114,72" fill="#fefce8" stroke="#0f172a" stroke-width="3.5"/>
+    <rect x="93" y="48" width="32" height="8" fill="#fefce8"/>
+    <text x="123" y="23" text-anchor="middle" fill="#0f172a" font-family="'Comic Sans MS', 'Segoe UI', sans-serif" font-size="13.5" font-weight="700">0 errors, 47 warnings...</text>
+    <text x="123" y="42" text-anchor="middle" fill="#dc2626" font-family="'Comic Sans MS', 'Segoe UI', sans-serif" font-size="15" font-weight="800">This is fine. ☕</text>
   </g>
 
   <!-- Desk Surface & Legs -->
-  <g transform="translate(64, 304)">
-    <rect x="0" y="0" width="832" height="18" rx="7" fill="url(#deskSurface)"/>
-    <rect x="24" y="16" width="784" height="3" rx="1.5" fill="url(#rgbStrip)" opacity="0.55"/>
-    <rect x="44" y="18" width="18" height="78" fill="#1e293b"/>
-    <rect x="770" y="18" width="18" height="78" fill="#1e293b"/>
+  <g transform="translate(70, 288)">
+    <rect x="0" y="0" width="820" height="18" rx="6" fill="#d97706" stroke="#0f172a" stroke-width="3"/>
+    <rect x="44" y="18" width="16" height="74" fill="#92400e" stroke="#0f172a" stroke-width="2.5"/>
+    <rect x="760" y="18" width="16" height="74" fill="#92400e" stroke="#0f172a" stroke-width="2.5"/>
   </g>
 
-  <!-- Cute Desk Succulent Plant (Left) -->
-  <g transform="translate(96, 250)">
-    <path d="M 8 24 L 40 24 L 35 54 L 13 54 Z" fill="#ea580c"/>
-    <rect x="6" y="20" width="36" height="7" rx="3" fill="#fb923c"/>
-    <ellipse cx="24" cy="14" rx="8" ry="13" fill="#22c55e"/>
-    <ellipse cx="14" cy="17" rx="6" ry="10" transform="rotate(-24 14 17)" fill="#4ade80"/>
-    <ellipse cx="34" cy="17" rx="6" ry="10" transform="rotate(24 34 17)" fill="#16a34a"/>
-    <!-- Tiny smiley on pot -->
-    <circle cx="19" cy="37" r="1.5" fill="#1e293b"/>
-    <circle cx="29" cy="37" r="1.5" fill="#1e293b"/>
-    <path d="M 21 41 Q 24 44 27 41" fill="none" stroke="#1e293b" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Wooden Chair Behind Stick-Figure -->
+  <g transform="translate(230, 182)">
+    <rect x="0" y="0" width="88" height="106" rx="14" fill="#78350f" stroke="#0f172a" stroke-width="3"/>
+    <rect x="12" y="14" width="64" height="20" rx="5" fill="#92400e"/>
   </g>
 
-  <!-- Gaming/Ergo Chair Back behind Developer -->
-  <g transform="translate(174, 152)">
-    <rect x="0" y="0" width="118" height="148" rx="28" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="2.5"/>
-    <rect x="14" y="14" width="90" height="114" rx="20" fill="#0f172a"/>
-    <rect x="34" y="22" width="50" height="10" rx="5" fill="#38bdf8" opacity="0.6"/>
+  <!-- Stick-Figure Comic Developer Character -->
+  <g transform="translate(226, 98)">
+    <!-- Stick Legs under desk edge -->
+    <path d="M 38 148 L 28 190" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M 62 148 L 72 190" stroke="#0f172a" stroke-width="5.5" stroke-linecap="round"/>
+
+    <!-- Hoodie Torso (classic comic stick-figure wearing oversized dev hoodie) -->
+    <path d="M 24 148 C 24 100, 76 100, 76 148 Z" fill="#0284c7" stroke="#0f172a" stroke-width="3.5" stroke-linejoin="round"/>
+    <text x="50" y="136" text-anchor="middle" fill="#e0f2fe" font-family="Consolas, monospace" font-size="11" font-weight="700">&lt;/&gt;</text>
+
+    <!-- Left Stick Arm holding Giant Steaming Coffee Mug -->
+    <path d="M 28 118 Q -4 128 8 150" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+    <!-- Right Stick Arm typing on Laptop/Keyboard -->
+    <path d="M 74 118 Q 118 134 156 176" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Steaming Coffee Mug in Hand -->
+    <g transform="translate(-20, 128)">
+      <g class="steam-1">
+        <path d="M 10 -4 C 6 -12, 16 -18, 11 -26" fill="none" stroke="#fef08a" stroke-width="2.4" stroke-linecap="round"/>
+      </g>
+      <g class="steam-2">
+        <path d="M 21 -6 C 17 -14, 27 -20, 22 -28" fill="none" stroke="#e2e8f0" stroke-width="2.4" stroke-linecap="round"/>
+      </g>
+      <path d="M 28 8 C 38 8, 38 24, 28 24" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+      <rect x="0" y="0" width="28" height="32" rx="5" fill="#f8fafc" stroke="#0f172a" stroke-width="3"/>
+      <rect x="3" y="3" width="22" height="6" rx="2" fill="#451a03"/>
+      <text x="14" y="23" text-anchor="middle" fill="#0f172a" font-family="sans-serif" font-size="8.5" font-weight="800">10x</text>
+    </g>
+
+    <!-- Stick Neck & Oversized Comic Round Head -->
+    <line x1="50" y1="88" x2="50" y2="106" stroke="#0f172a" stroke-width="5"/>
+    <circle cx="50" cy="54" r="36" fill="#fef9c3" stroke="#0f172a" stroke-width="3.5"/>
+
+    <!-- Cute Little Bowler / Beanie Hat (classic meme nod!) -->
+    <path d="M 22 30 Q 50 16 78 30 Z" fill="#4f46e5" stroke="#0f172a" stroke-width="3"/>
+    <rect x="18" y="28" width="64" height="8" rx="4" fill="#312e81" stroke="#0f172a" stroke-width="2.5"/>
+
+    <!-- Sweating Drop on Temple -->
+    <path d="M 24 50 C 20 56, 20 62, 24 62 C 28 62, 28 56, 24 50 Z" fill="#38bdf8" stroke="#0f172a" stroke-width="1.5"/>
+
+    <!-- Big Caffeine-Wired Comic Eyes + Glasses -->
+    <circle cx="44" cy="54" r="9.5" fill="#ffffff" stroke="#0f172a" stroke-width="2.8"/>
+    <circle cx="68" cy="54" r="9.5" fill="#ffffff" stroke="#0f172a" stroke-width="2.8"/>
+    <!-- Tiny pupils staring intently -->
+    <circle cx="47" cy="54" r="3.2" fill="#0f172a"/>
+    <circle cx="71" cy="54" r="3.2" fill="#0f172a"/>
+    <!-- Bridge of glasses -->
+    <line x1="53.5" y1="54" x2="58.5" y2="54" stroke="#0f172a" stroke-width="2.8"/>
+    <line x1="20" y1="50" x2="34.5" y2="52" stroke="#0f172a" stroke-width="2.5"/>
+
+    <!-- Slightly Wobbly Calm "This is Fine" Smile -->
+    <path d="M 40 72 Q 56 83 72 71" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
   </g>
 
-  <!-- Ultrawide Code Monitor (Right-Center) -->
-  <g transform="translate(422, 86)">
-    <!-- Stand -->
-    <path d="M 156 184 L 188 184 L 198 216 L 146 216 Z" fill="#475569"/>
-    <rect x="118" y="212" width="108" height="7" rx="3.5" fill="#64748b"/>
-    <!-- Frame -->
-    <rect x="0" y="0" width="344" height="186" rx="14" fill="#0f172a" stroke="#475569" stroke-width="3.5"/>
-    <rect x="12" y="12" width="320" height="158" rx="7" fill="url(#screenBg)"/>
+  <!-- Glowing Monitor on Desk (Right-Center) -->
+  <g transform="translate(420, 82)">
+    <rect x="148" y="176" width="44" height="30" fill="#475569" stroke="#0f172a" stroke-width="2.5"/>
+    <rect x="118" y="200" width="104" height="8" rx="4" fill="#64748b" stroke="#0f172a" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="178" rx="12" fill="#0f172a" stroke="#f8fafc" stroke-opacity="0.35" stroke-width="3"/>
+    <rect x="12" y="12" width="316" height="154" rx="6" fill="#090d16"/>
 
-    <!-- Window Dots & File Tab -->
-    <circle cx="26" cy="25" r="4" fill="#f87171"/>
-    <circle cx="40" cy="25" r="4" fill="#fbbf24"/>
-    <circle cx="54" cy="25" r="4" fill="#34d399"/>
-    <rect x="74" y="19" width="98" height="12" rx="4" fill="#1e293b"/>
-    <text x="123" y="28" text-anchor="middle" fill="#94a3b8" font-family="Consolas, monospace" font-size="8.5">agent.service.ts</text>
+    <!-- Window Controls -->
+    <circle cx="26" cy="24" r="4" fill="#f87171"/>
+    <circle cx="40" cy="24" r="4" fill="#fbbf24"/>
+    <circle cx="54" cy="24" r="4" fill="#34d399"/>
+    <text x="176" y="27" text-anchor="middle" fill="#94a3b8" font-family="Consolas, monospace" font-size="9.5">deploy-friday-5pm.ts</text>
 
     <!-- Code Lines -->
-    <rect x="26" y="45" width="76" height="7" rx="3.5" fill="#c084fc"/>
-    <rect x="108" y="45" width="118" height="7" rx="3.5" fill="#38bdf8"/>
-    <rect x="44" y="61" width="150" height="7" rx="3.5" fill="#22d3ee" opacity="0.9"/>
-    <rect x="44" y="77" width="196" height="7" rx="3.5" fill="#e2e8f0" opacity="0.72"/>
-    <rect x="62" y="93" width="112" height="7" rx="3.5" fill="#34d399"/>
-    <rect x="62" y="109" width="164" height="7" rx="3.5" fill="#fbbf24"/>
-    <rect x="44" y="125" width="88" height="7" rx="3.5" fill="#38bdf8"/>
+    <rect x="26" y="44" width="88" height="7" rx="3.5" fill="#f87171"/>
+    <rect x="122" y="44" width="132" height="7" rx="3.5" fill="#fbbf24"/>
+    <rect x="44" y="60" width="166" height="7" rx="3.5" fill="#38bdf8"/>
+    <rect x="44" y="76" width="194" height="7" rx="3.5" fill="#cbd5e1" opacity="0.72"/>
+    <rect x="62" y="92" width="138" height="7" rx="3.5" fill="#34d399"/>
+    <rect x="44" y="108" width="90" height="7" rx="3.5" fill="#22d3ee"/>
 
     <!-- Blinking Cursor -->
-    <rect x="138" y="123" width="8" height="12" rx="1.5" fill="#22d3ee" class="cursor-blink"/>
+    <rect x="140" y="106" width="9" height="12" rx="1.5" fill="#facc15" class="cursor-blink"/>
 
-    <!-- Mini Passing Terminal Footer -->
-    <rect x="22" y="143" width="300" height="18" rx="4" fill="#090d16"/>
-    <text x="30" y="155" fill="#34d399" font-family="Consolas, monospace" font-size="9.5" font-weight="700">✓ 400 evals passed · 0 hallucinations · coffee=LOW</text>
+    <!-- Funny Terminal Bar -->
+    <rect x="22" y="132" width="296" height="22" rx="5" fill="#1e293b"/>
+    <text x="30" y="146" fill="#34d399" font-family="Consolas, monospace" font-size="9.5" font-weight="700">$ git push --force  # tests passed locally!</text>
   </g>
 
-  <!-- Mechanical Keyboard & Mouse on Desk -->
-  <g transform="translate(384, 294)">
-    <rect x="0" y="2" width="142" height="10" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.55"/>
-    <rect x="8" y="-1" width="126" height="4" rx="1.5" fill="#64748b"/>
-    <rect x="166" y="3" width="26" height="9" rx="4.5" fill="#334155" stroke="#475569"/>
+  <!-- Keyboard on Desk -->
+  <g transform="translate(366, 276)">
+    <rect x="0" y="0" width="112" height="12" rx="3" fill="#334155" stroke="#0f172a" stroke-width="2.5"/>
   </g>
 
-  <!-- Expressive Cartoon Developer Character (3/4 view, typing excitedly) -->
-  <g transform="translate(186, 88)">
-    <!-- Hoodie Body -->
-    <path d="M 16 216 C 16 144, 124 144, 124 216 Z" fill="url(#hoodieGrad)"/>
-    <!-- Hoodie Collar & Drawstrings -->
-    <path d="M 38 156 Q 70 176 102 156" fill="none" stroke="#1e1b4b" stroke-width="6" stroke-linecap="round"/>
-    <line x1="56" y1="166" x2="54" y2="196" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
-    <line x1="84" y1="166" x2="86" y2="196" stroke="#e0f2fe" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="54" cy="198" r="2.5" fill="#38bdf8"/>
-    <circle cx="86" cy="198" r="2.5" fill="#38bdf8"/>
-
-    <!-- Typing Right Arm & Hand reaching to Keyboard -->
-    <path d="M 106 176 Q 158 186 206 206" fill="none" stroke="#0284c7" stroke-width="20" stroke-linecap="round"/>
-    <ellipse cx="212" cy="208" rx="13" ry="9" fill="url(#skinGrad)"/>
-    <!-- Left Arm -->
-    <path d="M 34 178 Q 52 204 114 212" fill="none" stroke="#3730a3" stroke-width="19" stroke-linecap="round"/>
-    <ellipse cx="122" cy="212" rx="12" ry="8" fill="url(#skinGrad)"/>
-
-    <!-- Animated Head & Expressive Face -->
-    <g class="head-bob">
-      <!-- Neck -->
-      <rect x="58" y="132" width="24" height="26" rx="8" fill="#e5a37b"/>
-      <!-- Ear (left) -->
-      <circle cx="28" cy="96" r="10" fill="#ebb08a"/>
-
-      <!-- Headphone Band -->
-      <path d="M 22 92 C 20 28, 124 28, 122 92" fill="none" stroke="#334155" stroke-width="11" stroke-linecap="round"/>
-      <path d="M 24 88 C 24 32, 120 32, 120 88" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-
-      <!-- Face -->
-      <ellipse cx="74" cy="90" rx="44" ry="48" fill="url(#skinGrad)"/>
-
-      <!-- Rosy Cheek Highlight -->
-      <ellipse cx="52" cy="105" rx="7" ry="4" fill="#fb7185" opacity="0.35"/>
-      <ellipse cx="102" cy="105" rx="6" ry="3.5" fill="#fb7185" opacity="0.35"/>
-
-      <!-- Spiky Fun Dark Hair + Cowlick -->
-      <path d="M 28 84 C 24 38, 118 32, 120 82 C 110 62, 92 56, 74 60 C 56 64, 40 66, 28 84 Z" fill="#0f172a"/>
-      <path d="M 52 44 Q 68 18 88 38 Q 98 22 108 46" fill="#0f172a"/>
-      <!-- Funny stray curl -->
-      <path d="M 74 36 C 68 16, 92 14, 86 30" fill="none" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
-
-      <!-- Big Expressive Cartoon Eyes -->
-      <ellipse cx="64" cy="88" rx="9" ry="10.5" fill="#ffffff"/>
-      <ellipse cx="96" cy="88" rx="9" ry="10.5" fill="#ffffff"/>
-      <!-- Pupils looking toward monitor -->
-      <circle cx="67" cy="88" r="5" fill="#0f172a"/>
-      <circle cx="99" cy="88" r="5" fill="#0f172a"/>
-      <!-- Catchlights -->
-      <circle cx="69" cy="85.5" r="2" fill="#ffffff"/>
-      <circle cx="101" cy="85.5" r="2" fill="#ffffff"/>
-
-      <!-- Raised Excited Eyebrows -->
-      <path d="M 54 72 Q 64 66 73 72" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-      <path d="M 87 72 Q 96 66 105 72" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
-
-      <!-- Stylish Thick Glasses -->
-      <rect x="51" y="77" width="26" height="22" rx="6" fill="#38bdf8" fill-opacity="0.1" stroke="#0f172a" stroke-width="3.2"/>
-      <rect x="83" y="77" width="26" height="22" rx="6" fill="#38bdf8" fill-opacity="0.1" stroke="#0f172a" stroke-width="3.2"/>
-      <line x1="77" y1="86" x2="83" y2="86" stroke="#0f172a" stroke-width="3"/>
-      <!-- Glare on lenses -->
-      <line x1="56" y1="82" x2="62" y2="88" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/>
-      <line x1="88" y1="82" x2="94" y2="88" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.65"/>
-
-      <!-- Cute Nose & Big Cheeky Grin -->
-      <path d="M 80 94 Q 85 98 80 102" fill="none" stroke="#c9855e" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M 65 111 Q 81 124 97 110 Z" fill="#ffffff" stroke="#0f172a" stroke-width="2.2" stroke-linejoin="round"/>
-
-      <!-- Glowing Studio Headphone Earcups -->
-      <rect x="14" y="74" width="18" height="36" rx="8" fill="#1e293b" stroke="#22d3ee" stroke-width="2.5"/>
-      <rect x="114" y="74" width="16" height="34" rx="7" fill="#1e293b" stroke="#22d3ee" stroke-width="2.5"/>
-      <circle cx="23" cy="92" r="4" fill="#22d3ee"/>
-    </g>
-  </g>
-
-  <!-- Rubber Duck Debugger Sidekick on Desk -->
-  <g transform="translate(760, 260)">
-    <g class="duck-pop">
-      <!-- Body -->
-      <ellipse cx="22" cy="30" rx="18" ry="13" fill="#facc15"/>
-      <path d="M 10 28 Q 22 36 32 26" fill="none" stroke="#eab308" stroke-width="2.5" stroke-linecap="round"/>
-      <!-- Head -->
-      <circle cx="17" cy="14" r="11" fill="#fde047"/>
-      <!-- Tiny Cool Sunglasses -->
-      <rect x="9" y="10" width="7" height="5" rx="1.5" fill="#0f172a"/>
-      <rect x="18" y="10" width="7" height="5" rx="1.5" fill="#0f172a"/>
-      <line x1="16" y1="12" x2="18" y2="12" stroke="#0f172a" stroke-width="1.5"/>
-      <!-- Orange Beak -->
-      <path d="M 3 14 L 10 12 L 10 18 L 3 16 Z" fill="#f97316"/>
-    </g>
-  </g>
-
-  <!-- Oversized Steaming Coffee Mug -->
-  <g transform="translate(822, 246)">
-    <!-- Rising Steam -->
-    <g class="steam-1">
-      <path d="M 12 -6 C 7 -15, 19 -22, 13 -32" fill="none" stroke="#e2e8f0" stroke-width="2.6" stroke-linecap="round"/>
-    </g>
-    <g class="steam-2">
-      <path d="M 24 -9 C 19 -18, 31 -25, 25 -35" fill="none" stroke="#38bdf8" stroke-width="2.6" stroke-linecap="round"/>
-    </g>
-    <g class="steam-3">
-      <path d="M 36 -5 C 31 -14, 42 -21, 37 -30" fill="none" stroke="#a5b4fc" stroke-width="2.4" stroke-linecap="round"/>
-    </g>
-    <!-- Mug Handle & Body -->
-    <path d="M 46 14 C 62 14, 62 44, 46 44" fill="none" stroke="#f8fafc" stroke-width="5.5" stroke-linecap="round"/>
-    <rect x="4" y="2" width="44" height="54" rx="8" fill="#f8fafc"/>
-    <rect x="4" y="2" width="44" height="11" rx="4" fill="#38bdf8"/>
-    <ellipse cx="26" cy="5" rx="16" ry="3.5" fill="#451a03"/>
-    <text x="26" y="34" text-anchor="middle" fill="#0f172a" font-family="Consolas, monospace" font-size="11" font-weight="700">{☕}</text>
+  <!-- Nervous Comic Rubber Duck on Right Side of Desk -->
+  <g transform="translate(778, 240)">
+    <ellipse cx="22" cy="34" rx="18" ry="13" fill="#facc15" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="18" cy="17" r="11" fill="#fde047" stroke="#0f172a" stroke-width="2.5"/>
+    <circle cx="14" cy="15" r="3" fill="#fff" stroke="#0f172a" stroke-width="1.5"/>
+    <circle cx="13.5" cy="15" r="1.2" fill="#0f172a"/>
+    <path d="M 3 16 L 10 14 L 10 20 L 3 18 Z" fill="#f97316" stroke="#0f172a" stroke-width="2"/>
+    <text x="38" y="8" fill="#fef08a" font-family="'Comic Sans MS', sans-serif" font-size="11" font-weight="700">quack?!</text>
   </g>
 </svg>
